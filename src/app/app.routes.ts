@@ -19,6 +19,7 @@ import { ViewProjectComponent } from './view-project/view-project.component';
 import { HireDeveloperComponent } from './hire-developer/hire-developer.component';
 import { RevisarPortafoliosFreelancerComponent } from './revisar-portafolios-freelancer/revisar-portafolios-freelancer.component';
 import { HistorialProyectosComponent } from './historial-proyectos/historial-proyectos.component';
+import { VerDesarrolladoresFavoritosComponent } from './ver-desarrolladores-favoritos/ver-desarrolladores-favoritos.component'; 
 
 
 export const routes: Routes = [
@@ -42,4 +43,6 @@ export const routes: Routes = [
   { path: 'hire-developer', component: HireDeveloperComponent},
   { path: 'revisar-portafolios-freelancer', component: RevisarPortafoliosFreelancerComponent},
   { path: 'historial-proyectos', component: HistorialProyectosComponent},
+  { path: 'ver-desarrolladores-favoritos', component: VerDesarrolladoresFavoritosComponent },
+
 ];

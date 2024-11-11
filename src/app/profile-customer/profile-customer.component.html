@@ -1,7 +1,8 @@
 <div class="profile-page">
   <button class="back-home-btn" (click)="goToHome()">⬅ Regresar a la Página Principal</button>
-
+  
   <div class="profile-customer-container">
+    <!-- Encabezado del perfil -->
     <div class="profile-header">
       <div class="profile-image">
         <img src="assets/profile-placeholder.png" alt="Profile Picture">
@@ -9,11 +10,16 @@
       <div class="profile-info">
         <h2>{{ customer.name }}</h2>
         <p class="customer-description">{{ customer.description }}</p>
-        <button class="edit-profile-btn" (click)="editProfile()">Editar Perfil</button>
-        <button class="contact-btn" (click)="verproyecto()">Ver Proyectos</button>
+        
+        <div class="profile-actions">
+          <button class="edit-profile-btn" (click)="editProfile()">Editar Perfil</button>
+          <button class="contact-btn" (click)="verproyecto()">Ver Proyectos</button>
+          <button class="view-favorites-btn" (click)="goToFavorites()">Ver Favoritos ⭐</button>
+        </div>
       </div>
     </div>
 
+    <!-- Sección de Proyectos -->
     <div class="projects-section">
       <h3>Proyectos Publicados</h3>
       <button class="create-project-btn" (click)="createProject()">Crear Proyecto</button>

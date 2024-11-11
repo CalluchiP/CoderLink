@@ -34,6 +34,8 @@ export class ProfileCustomerVistaDComponent {
     this.router.navigate(['/edit-profile']);
   }
 
+ 
+
   createProject() {
     // Redirige a la página de creación de proyectos
     this.router.navigate(['/create-project']);

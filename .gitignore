@@ -45,3 +45,5 @@ Thumbs.db
 .netlify
 
 .vercel
+
+*storybook.log

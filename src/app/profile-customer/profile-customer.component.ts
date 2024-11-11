@@ -39,6 +39,11 @@ export class ProfileCustomerComponent {
     this.router.navigate(['/edit-profile-customer']);
   }
 
+  goToFavorites() {
+    // Redirige a la ruta correcta de favoritos
+    this.router.navigate(['/ver-desarrolladores-favoritos']); // Asegúrate de que esta ruta esté bien configurada
+  }
+
   createProject() {
     // Redirige a la página de creación de proyectos
     this.router.navigate(['/crear-proyecto']);
