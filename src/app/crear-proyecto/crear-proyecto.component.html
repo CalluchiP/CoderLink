@@ -2,40 +2,51 @@
   <div class="back-home-container">
     <button class="back-home-btn" (click)="goToHome()">Regresar</button>
   </div>
-    <h2>Crear Proyecto</h2>
-    <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
-      
-      <label for="nombre">Nombre del Proyecto:</label>
-      <input type="text" id="nombre" formControlName="nombre" required>
-      
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" formControlName="descripcion" rows="4" required></textarea>
-      
-      <label for="presentacion">Presentación:</label>
-      <input type="text" id="presentacion" formControlName="presentacion" required>
-      
-      <label for="estado">Estado:</label>
-      <select id="estado" formControlName="estado">
-        <option value="in-progress">En Progreso</option>
-        <option value="completed">Completado</option>
-        <option value="pending">Pendiente</option>
-      </select>
-      
-      <label for="revision">Revisión:</label>
-      <input type="text" id="revision" formControlName="revision" required>
-      
-      <label for="categoria">Categoría:</label>
-      <input type="text" id="categoria" formControlName="categoria" required>
-      
-      <label for="calificacion">Calificación:</label>
-      <select id="calificacion" formControlName="calificacion">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-      
-      <button type="submit" class="submit-btn">Crear Proyecto</button>
-    </form>
-  </div>
+  <h2>Crear Proyecto</h2>
+  <form [formGroup]="proyectoForm" (ngSubmit)="onSubmit()">
+    <label for="nombre">Nombre del Proyecto:</label>
+    <input type="text" id="nombre" formControlName="nombre" required />
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" formControlName="descripcion" rows="4" required></textarea>
+
+    <label for="presentacion">Presentación:</label>
+    <input type="text" id="presentacion" formControlName="presentacion" required />
+
+    <label for="estado">Estado:</label>
+    <select id="estado" formControlName="estado">
+      <option value="in-progress">En Progreso</option>
+      <option value="completed">Completado</option>
+      <option value="pending">Pendiente</option>
+    </select>
+
+    <label for="revision">Revisión:</label>
+    <input type="text" id="revision" formControlName="revision" required />
+
+    <label for="categoria">Categoría:</label>
+    <input type="text" id="categoria" formControlName="categoria" required />
+
+    <label for="calificacion">Calificación:</label>
+    <select id="calificacion" formControlName="calificacion">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <label for="tarifa">Tarifa:</label>
+    <input 
+      type="number" 
+      id="tarifa" 
+      formControlName="tarifa" 
+      required 
+      placeholder="Ingrese la tarifa en números positivos"
+    />
+    <div class="error-message" *ngIf="proyectoForm.controls['tarifa'].invalid && proyectoForm.controls['tarifa'].touched">
+      Monto inválido. Debe ser un número positivo.
+    </div>
+
+    <button type="submit" class="submit-btn">Crear Proyecto</button>
+  </form>
+</div>

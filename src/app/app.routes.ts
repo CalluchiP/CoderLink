@@ -44,5 +44,5 @@ export const routes: Routes = [
   { path: 'revisar-portafolios-freelancer', component: RevisarPortafoliosFreelancerComponent},
   { path: 'historial-proyectos', component: HistorialProyectosComponent},
   { path: 'ver-desarrolladores-favoritos', component: VerDesarrolladoresFavoritosComponent },
-
+  
 ];
